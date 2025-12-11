@@ -15,17 +15,17 @@ Perfect for beginners to learn and experienced developers to build upon.
 ## 🏗️ Architecture
 
 ```
-capstone_1/
-├── server/          # Backend (Python/FastAPI)
-│   ├── main.py      # API routes and streaming
-│   ├── agent.py     # LangGraph agent logic
-│   ├── config.py    # Configuration settings
+langgraph-chat-starter/
+├── server/              # Backend (Python/FastAPI)
+│   ├── main.py          # API routes and streaming
+│   ├── agent.py         # LangGraph agent logic
+│   ├── config.py        # Configuration settings
 │   └── requirements.txt
-└── UI/              # Frontend (React/TypeScript)
+└── client/              # Frontend (React/TypeScript)
     └── src/
-        ├── App.tsx           # Main chat component
+        ├── App.tsx              # Main chat component
         └── hooks/
-            └── useChatStream.ts  # Streaming logic
+            └── useChatStream.ts # Streaming logic
 ```
 
 ## 🚀 Quick Start
@@ -69,9 +69,9 @@ capstone_1/
 
 ### Frontend Setup
 
-1. **Navigate to UI folder:**
+1. **Navigate to client folder:**
    ```bash
-   cd UI
+   cd client
    ```
 
 2. **Install dependencies:**
@@ -111,7 +111,7 @@ TAVILY_MAX_RESULTS=3
 
 ### Frontend
 
-Create `UI/.env` for custom API URL:
+Create `client/.env` for custom API URL:
 ```env
 VITE_API_URL=http://localhost:8000
 ```
@@ -121,8 +121,8 @@ VITE_API_URL=http://localhost:8000
 - **`server/main.py`** - FastAPI app, routes, and streaming handler
 - **`server/agent.py`** - LangGraph agent setup and graph definition
 - **`server/config.py`** - Simple configuration management
-- **`UI/src/App.tsx`** - Main chat UI component
-- **`UI/src/hooks/useChatStream.ts`** - Streaming logic hook
+- **`client/src/App.tsx`** - Main chat UI component
+- **`client/src/hooks/useChatStream.ts`** - Streaming logic hook
 
 ## 🎯 Customization
 
@@ -147,7 +147,7 @@ MODEL_TEMPERATURE=0.7
 
 ### Customize UI
 
-Edit `UI/src/App.tsx` - all components are in your codebase, modify as needed!
+Edit `client/src/App.tsx` - all components are in your codebase, modify as needed!
 
 ## 🐛 Troubleshooting
 
@@ -157,7 +157,7 @@ Edit `UI/src/App.tsx` - all components are in your codebase, modify as needed!
 
 **Frontend can't connect:**
 - Verify server is running
-- Check `VITE_API_URL` in `UI/.env`
+- Check `VITE_API_URL` in `client/.env`
 
 **Tool calls not working:**
 - Verify `TAVILY_API_KEY` is set
